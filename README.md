@@ -1,50 +1,164 @@
-# Welcome to your Expo app 👋
+# Giggle Frontend 🎵 Group project
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A React Native mobile application for sharing spare gig tickets within the community. 
 
-## Get started
+Built by **isLoading** team as part of the Northcoders bootcamp final project.
 
-1. Install dependencies
+🔗 **Back-end Repository:** [Giggle BE](https://github.com/Andipascale7/giggle-be)
 
-   ```bash
-   npm install
-   ```
+## 📖 About
 
-2. Start the app
+Giggle connects fellow gig-goers who share your style of outing, no matter how big or small the artist. Share spare tickets among the Giggle user base – strictly no reselling! Just sharing music and art to build community and support local venues.
 
-   ```bash
-   npx expo start
-   ```
+The app focuses on **free ticket sharing** with **no reselling** and provides an ability to match with people who share the same gig-going style as you.
 
-In the output, you'll find options to open the app in a
+## ✨ Key Features
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### 🎫 Event Discovery & Ticket Management
+- **Browse Events**: Scrollable list of upcoming concerts, comedy shows, and local art exhibitions
+- **Real-time Search**: Search by keywords with instant results
+- **Smart Filtering**: Sort events by date, artist, or location
+- **Multi-city Support**: View events happening in different cities
+- **Event Integration**: Add new events via Ticketmaster Discovery API
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### 🎟️ Ticket Sharing System
+- **List Tickets**: Upload spare tickets with seating type and additional notes
+- **Find Tickets**: Browse available tickets from other users
+- **Status Tracking**: Visual indicators for taken/available tickets
+- **No Reselling Policy**: Strictly community-based free sharing
 
-## Get a fresh project
+### 👤 User Profiles & Matching
+- **Detailed Profiles**: First/last name, username, location, profile picture, and bio
+- **Gig Preferences**: Tags for seat preference, singing, moshing, filming style, etc.
+- **Profile Compatibility**: Choose ticket sharers based on compatible gig-going styles
+- **Editable Profiles**: Users can update their details and preferences
 
-When you're ready, run:
+### 💬 Real-time Messaging
+- **Instant Chat**: Powered by Socket.IO for live communication
+- **Chat Rooms**: Structured messaging system similar to WhatsApp/Messenger
+- **Message History**: Persistent conversation storage
+- **Active Conversations**: Easy access to ongoing chats
 
+### 🔐 Authentication & Security
+- **Secure Registration**: Unique username/email requirements
+- **Password Security**: Bcrypt hashing - no plain text storage
+- **Login Validation**: Secure password comparison against stored hashes
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
+- Expo CLI (optional but recommended)
+- Access to the Giggle backend API
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run reset-project
+git clone https://github.com/Andipascale7/giggle-fe.git
+cd giggle-fe
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+2. Install dependencies:
+```bash
+npm install
+```
 
-## Learn more
+3. Start the development server:
+```bash
+npx expo start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+## 📱 Running the App
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+**Primary Platform**: Android (tailored for Android devices)
 
-## Join the community
+- **Expo Go**: Scan QR code with Expo Go app
+- **Android Emulator**: Press `a` in terminal
+- **Web Browser**: Press `w` in terminal (limited functionality)
 
-Join our community of developers creating universal apps.
+## 🏗️ Tech Stack
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### Frontend
+- **React Native** with Expo
+- **TypeScript** for type safety
+- **Expo Router** (file-based routing)
+- **Socket.IO Client** for real-time messaging
+
+### Backend Integration
+- **RESTful API** built with Express.js and TypeScript
+- **MongoDB** database with Mongoose ODM
+- **Socket.IO** for real-time communication (separate port)
+- **Ticketmaster Discovery API** for event data
+- **Bcrypt** for password hashing
+
+### Testing
+- **Jest** for unit testing
+
+
+
+### Key API Endpoints
+- `GET /events` - Fetch upcoming events
+- `POST /tickets` - Upload new ticket listings  
+- `GET /tickets/:eventId` - Get tickets for specific event
+- `GET /chats` - Fetch user's active conversations
+- `GET /chats/:id` - Get chat history for specific conversation
+
+
+
+
+## 🎪 User Journey
+
+1. **Sign Up/Login**: Secure authentication with hashed passwords
+2. **Discover Events**: Browse or search for upcoming gigs
+3. **List Tickets**: Upload spare tickets with details and notes
+4. **Find Tickets**: Search available tickets from other users
+5. **Check Profiles**: View ticket holders' gig-going preferences  
+6. **Chat**: Message other users about tickets and arrangements
+7. **Add Events**: Integrate new events via Ticketmaster API if not in database
+
+## 👥 The Team - isLoading
+
+- [**Andi Pascale**](https://www.linkedin.com/in/andipascale/)
+- [**Bethany White**](https://www.linkedin.com/in/bethpwhite/) 
+- [**David Potter**](https://www.linkedin.com/in/dg-potter013/)
+- [**Leah Stone**](https://www.linkedin.com/in/leah-s-ba9004130/) 
+- [**Uzo Ugochukwu**](https://github.com/uzougochukwu)
+
+## 🛠️ Development Challenges Overcome
+
+- Working in agile environment and collaborative Git workflows
+- Integrating multiple new technologies (React Native, Socket.IO, MongoDB)
+- Implementing real-time communication with Socket.IO
+- Managing merge conflicts and team-based development
+- Building mobile-first applications with cross-platform considerations
+
+## 🔮 Future Enhancements
+
+- Read receipts for messages
+- Typing indicators in chat
+- Push notifications
+- End-to-end encryption for enhanced security
+- iOS optimization and testing
+
+## 📚 Learn More
+
+- [Project Showcase](https://www.northcoders.com/blog/giggle/)
+- [Expo Documentation](https://docs.expo.dev/)
+- [Socket.IO Documentation](https://socket.io/docs/)
+- [Ticketmaster Discovery API](https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/)
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+---
+
+*Building community through music, one shared ticket at a time* 🎸
+
+
