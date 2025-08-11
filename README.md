@@ -86,26 +86,6 @@ npx expo start
 - **Expo Router** (file-based routing)
 - **Socket.IO Client** for real-time messaging
 
-### Backend Integration
-- **RESTful API** built with Express.js and TypeScript
-- **MongoDB** database with Mongoose ODM
-- **Socket.IO** for real-time communication (separate port)
-- **Ticketmaster Discovery API** for event data
-- **Bcrypt** for password hashing
-
-### Testing
-- **Jest** for unit testing
-
-
-
-### Key API Endpoints
-- `GET /events` - Fetch upcoming events
-- `POST /tickets` - Upload new ticket listings  
-- `GET /tickets/:eventId` - Get tickets for specific event
-- `GET /chats` - Fetch user's active conversations
-- `GET /chats/:id` - Get chat history for specific conversation
-
-
 
 
 ## 🎪 User Journey
