@@ -48,7 +48,7 @@ The app focuses on **free ticket sharing** with **no reselling** and provides an
 
 ### Prerequisites
 - Node.js (v14 or higher)
-- npm or yarn
+- npm 
 - Expo CLI (optional but recommended)
 - Access to the Giggle backend API
 
